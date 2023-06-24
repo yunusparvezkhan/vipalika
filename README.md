@@ -1,3 +1,21 @@
+# VipaLika
+VipaLika is a shopping list tracker app, intended to be a practice project on some topics in NodeJS such as, -->
+* ReactJS
+* ReduxJS
+* Redux Toolkit
+* State management
+* Tracking data
+
+And more.
+
+## Commit's Convention
+This app uses the [Conventional Commits](https://conventionalcommits.org) Commit convention. For more information read about it by clicking on the link.
+
+> **Note**
+>
+>Technical informaton regarding the app will be updated along the way as the app gets developed.
+
+***
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
