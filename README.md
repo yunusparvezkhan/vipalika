@@ -1,4 +1,5 @@
-# VipaLika
+![VipaLika Logo](./src/media/logo/logo-transparent-blue-shorted.png)
+#
 VipaLika is a shopping list tracker app, intended to be a practice project on some topics in NodeJS such as, -->
 * ReactJS
 * ReduxJS
