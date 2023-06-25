@@ -1,8 +1,8 @@
 import React from "react";
-import CarForm from "./components/carForm";
-import CarSearch from "./components/carSearch";
-import CarList from "./components/carList";
-import CarValue from "./components/carValue";
+import CarForm from "./components/CarForm";
+import CarSearch from "./components/CarSearch";
+import CarList from "./components/CarList";
+import CarValue from "./components/CarValue";
 
 function App() {
   return (
