@@ -1,8 +1,8 @@
 import React from "react";
-import CarForm from "./components/CarForm";
-import CarSearch from "./components/CarSearch";
-import CarList from "./components/CarList";
-import CarValue from "./components/CarValue";
+import ItemForm from "./components/ItemForm";
+import ItemSearch from "./components/ItemSearch";
+import ItemList from "./components/ItemList";
+import ItemValue from "./components/ItemValue";
 
 function App() {
   return (
@@ -10,10 +10,10 @@ function App() {
       <h1>
         App
       </h1>
-      <CarForm />
-      <CarSearch />
-      <CarList />
-      <CarValue />
+      <ItemForm />
+      <ItemSearch />
+      <ItemList />
+      <ItemValue />
     </div>
   );
 }
