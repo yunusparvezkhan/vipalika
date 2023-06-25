@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <h1>
-        App
+        VipaLika 📃
       </h1>
       <ItemForm />
       <ItemSearch />
