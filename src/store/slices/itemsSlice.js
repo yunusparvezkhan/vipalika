@@ -15,7 +15,9 @@ const itemsSlice = createSlice({
             ]
         },
         removeItem(state, action) {
-            const newArr = state.splice(action.payload);
+            const newArr = state.filter((item) => {
+                return item.id !== action.payload;
+            })
             return newArr;
         }
     }
