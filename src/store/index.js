@@ -1,9 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { formReducer, addName, addCost } from "./slices/formSlice";
 
 const store = configureStore({
     reducer: {
-        // add slice reducers
+        form: formReducer
     }
 })
 
-export { store }
+
+export { store };
+
+// export formSlice actions
+export { addName, addCost };
