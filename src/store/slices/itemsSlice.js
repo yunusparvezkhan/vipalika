@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const itemsSlice = createSlice({
     name: "items",
@@ -7,7 +7,11 @@ const itemsSlice = createSlice({
         addItem(state, action) {
             return [
                 ...state,
-                action.payload
+                {
+                    name: action.payload.name,
+                    cost: action.payload.cost,
+                    id: nanoid(),
+                }
             ]
         },
         removeItem(state, action) {
