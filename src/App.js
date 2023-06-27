@@ -11,9 +11,9 @@ function App() {
         VipaLika 📃
       </h1>
       <ItemForm />
-      <ItemSearch />
-      <ItemList />
-      <ItemValue />
+      {/* <ItemSearch /> */}
+      {/* <ItemList /> */}
+      {/* <ItemValue /> */}
     </div>
   );
 }
