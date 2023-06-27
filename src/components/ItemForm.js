@@ -15,7 +15,7 @@ const ItemForm = () => {
     }
 
     const handleCostChange = (event) => {
-        dispatch(addCost(parseInt(event.target.value)));
+        dispatch(addCost(parseInt(event.target.value) || 0));
     }
 
     return (
