@@ -10,6 +10,12 @@ const ItemForm = () => {
         return state.form;
     })
 
+    const all = useSelector((state) => {
+        return state.items
+    })
+
+    console.log(all);
+
     const handleNameChange = (event) => {
         dispatch(addName(event.target.value));
     }
