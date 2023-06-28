@@ -6,6 +6,7 @@ const itemsSearchSlice = createSlice({
         searchTerm: ""
     },
     reducers: {
+        // changeSearchTerm() function expects one string as parameter, which should be the new search term.
         changeSearchTerm(state, action) {
             return {
                 ...state,

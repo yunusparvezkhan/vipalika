@@ -7,12 +7,14 @@ const formSlice = createSlice({
         cost: 0
     },
     reducers: {
+        // addName() func expects one parameter with the new name
         addName(state, action) {
             return {
                 ...state,
                 name: action.payload
             }
         },
+        // addCost() func expects one parameter with the new cost (must be a integer)
         addCost(state, action) {
             return {
                 ...state,
