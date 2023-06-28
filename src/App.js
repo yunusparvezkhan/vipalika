@@ -3,7 +3,6 @@ import ItemForm from "./components/ItemForm";
 import ItemSearch from "./components/ItemSearch";
 import ItemList from "./components/ItemList";
 import ItemValue from "./components/ItemValue";
-import './app.css'
 
 function App() {
   return (
