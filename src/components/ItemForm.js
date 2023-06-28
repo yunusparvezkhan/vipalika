@@ -4,6 +4,7 @@ import { addName, addCost, addItem } from '../store';
 
 const ItemForm = () => {
 
+    const [reloader, setReloader] = useState(false)
     const dispatch = useDispatch();
 
     const { name, cost } = useSelector((state) => {
@@ -28,6 +29,8 @@ const ItemForm = () => {
             dispatch(addItem({ name, cost }));
             dispatch(addName(''));
             dispatch(addCost(0));
+        } else {
+            setReloader(!reloader)
         }
     }
 
@@ -35,7 +38,7 @@ const ItemForm = () => {
     const inputReference = useRef();
     useEffect(() => {
         inputReference.current.focus();
-    }, [items])
+    }, [items, reloader])
 
     return (
         <div className='item-form panel'>
