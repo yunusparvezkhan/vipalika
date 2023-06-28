@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { name, addName, addCost } from '../store';
+import { addName, addCost } from '../store';
 
 const ItemForm = () => {
 
@@ -30,7 +30,7 @@ const ItemForm = () => {
 
                 <div className='field'>
                     <label className='label'>Cost ₹ </label>
-                    <input type='number' className='input is-expanded' value={cost} onChange={handleCostChange} />
+                    <input type='number' className='input is-expanded' value={cost || ''} onChange={handleCostChange} />
                 </div>
 
             </div>
