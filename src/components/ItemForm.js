@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addName, addCost, addItem } from '../store';
 
@@ -8,6 +8,10 @@ const ItemForm = () => {
 
     const { name, cost } = useSelector((state) => {
         return state.form;
+    })
+
+    const items = useSelector((state) => {
+        return state.items;
     })
 
     const handleNameChange = (event) => {
@@ -27,6 +31,12 @@ const ItemForm = () => {
         }
     }
 
+    // Auto focuses the name input after submit
+    const inputReference = useRef();
+    useEffect(() => {
+        inputReference.current.focus();
+    }, [items])
+
     return (
         <div className='item-form panel'>
             <h3 className='subtitle is-3'>Add Item</h3>
@@ -34,7 +44,7 @@ const ItemForm = () => {
                 <div className='field-group'>
                     <div className='field'>
                         <label className='label'> Name </label>
-                        <input className='input is-expanded' value={name} onChange={handleNameChange} />
+                        <input className='input is-expanded' ref={inputReference} value={name} onChange={handleNameChange} />
                     </div>
 
                     <div className='field'>
