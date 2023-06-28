@@ -9,7 +9,7 @@ const ItemList = () => {
 
     const renderItems = items.map((item, i) => {
         return (
-            <div>
+            <div key={item.id}>
                 <label><b>{i + 1}. </b></label>
                 <br></br>
                 <label>Name: {item.name}</label>
