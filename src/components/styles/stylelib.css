@@ -1,0 +1,26 @@
+.item-box {
+    position: relative;
+}
+
+.item-container {
+    display: flex;
+}
+
+.item-text-box {
+    padding: 20px;
+    min-height: 50px;
+    flex: 3;
+}
+
+.item-btn-box {
+    position: relative;
+    flex: 1;
+    top: 50%;
+}
+
+.item-remove-btn {
+    position: absolute;
+    margin-left: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}

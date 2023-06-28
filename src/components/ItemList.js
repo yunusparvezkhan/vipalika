@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem } from '../store';
+import './styles/stylelib.css';
 
 const ItemList = () => {
 
@@ -16,14 +17,15 @@ const ItemList = () => {
 
     const renderItems = items.map((item, i) => {
         return (
-            <div key={item.id}>
-                <label><b>{i + 1}. </b></label>
-                <br></br>
-                <label>{item.name} - </label>
-                <label>₹{item.cost}</label>
-                <button onClick={() => handleRemove(item.id)} >Remove</button>
-                <br></br>
-                <br></br>
+            <div key={item.id} className='panel item-box' >
+                <div className='item-container' >
+                    <div className='item-text-box'>
+                        <label className='item-text' ><b>{i + 1}. </b> {item.name} - ₹{item.cost}</label>
+                    </div>
+                    <div className='item-btn-box'>
+                        <button onClick={() => handleRemove(item.id)} className='button is-danger item-remove-btn' >Remove</button>
+                    </div>
+                </div>
             </div>
         )
     })
@@ -32,6 +34,7 @@ const ItemList = () => {
     return (
         <div>
             {renderItems}
+            <hr />
         </div>
     )
 }
