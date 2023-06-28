@@ -21,7 +21,9 @@ const ItemForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (name !== null && name.trim().length !== 0) {
-            dispatch(addItem({ name, cost }))
+            dispatch(addItem({ name, cost }));
+            dispatch(addName(''));
+            dispatch(addCost(0));
         }
     }
 
