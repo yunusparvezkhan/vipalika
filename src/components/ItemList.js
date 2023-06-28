@@ -12,9 +12,8 @@ const ItemList = () => {
             <div key={item.id}>
                 <label><b>{i + 1}. </b></label>
                 <br></br>
-                <label>Name: {item.name}</label>
-                <br></br>
-                <label>Cost: ₹{item.cost}</label>
+                <label>{item.name} - </label>
+                <label>₹{item.cost}</label>
                 <br></br>
                 <br></br>
             </div>
