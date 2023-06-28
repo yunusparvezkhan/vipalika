@@ -20,7 +20,9 @@ const ItemForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(addItem({ name, cost }))
+        if (name !== null && name.trim().length !== 0) {
+            dispatch(addItem({ name, cost }))
+        }
     }
 
     return (
@@ -35,7 +37,7 @@ const ItemForm = () => {
 
                     <div className='field'>
                         <label className='label'>Cost ₹ </label>
-                        <input type='number' className='input is-expanded' value={cost || ''} onChange={handleCostChange} />
+                        <input type='number' className='input is-expanded' placeholder='0' value={cost || ''} onChange={handleCostChange} />
                     </div>
 
                     <div className='field'>
