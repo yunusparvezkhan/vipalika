@@ -25,10 +25,17 @@ const ItemForm = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         if (name !== null && name.trim().length !== 0) {
+
             dispatch(addItem({ name, cost }));
-            dispatch(addName(''));
-            dispatch(addCost(0));
+
+            // This was how name and cost input was reset before this commit
+            // --------------------------------------------------------------//
+            // dispatch(addName(''));                                       //
+            // dispatch(addCost(0));                                       //
+            // -----------------------------------------------------------//
+
         } else {
             setReloader(!reloader)
         }
