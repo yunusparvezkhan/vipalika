@@ -12,7 +12,7 @@ function App() {
           VipaLika 📃
         </h1>
         <ItemForm />
-        {/* <ItemSearch /> */}
+        <ItemSearch />
         <ItemList />
         {/* <ItemValue /> */}
       </div>
