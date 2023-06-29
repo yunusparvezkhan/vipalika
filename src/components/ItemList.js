@@ -6,6 +6,7 @@ import './styles/stylelib.css';
 const ItemList = () => {
 
     const dispatch = useDispatch();
+    let totalCost = 0;
 
     const items = useSelector((state) => {
         return state.items;
@@ -16,6 +17,9 @@ const ItemList = () => {
     }
 
     const renderItems = items.map((item, i) => {
+
+        totalCost = totalCost + item.cost;
+
         return (
             <div key={item.id} className='panel item-box' >
                 <div className='item-container' >
@@ -35,6 +39,8 @@ const ItemList = () => {
         <div>
             {renderItems}
             <hr />
+            <label><b>Total Cost :-</b></label>
+            <label> ₹{totalCost}</label>
         </div>
     )
 }
