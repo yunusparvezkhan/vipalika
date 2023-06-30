@@ -2,7 +2,6 @@ import React from "react";
 import ItemForm from "./components/ItemForm";
 import ItemSearch from "./components/ItemSearch";
 import ItemList from "./components/ItemList";
-import ItemValue from "./components/ItemValue";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <ItemForm />
         <ItemSearch />
         <ItemList />
-        {/* <ItemValue /> */}
       </div>
     </div>
   );

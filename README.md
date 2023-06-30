@@ -12,11 +12,24 @@ And more.
 ## Commit's Convention
 This app uses the [Conventional Commits](https://conventionalcommits.org) Commit convention. For more information read about it by clicking on the link.
 
-> **Note**
->
->Technical informaton regarding the app will be updated along the way as the app gets developed.
+## The App
+The App has one form component, that provides two input fields to collect the name and the cost of the item. Then a search component, for searching some item in the list. Then it has a list component that lists all the added items, and the total cost of them at the bottom.
 
-***
+![App Landing Page](./src/media/diagrams/app.png)
+### After adding items
+![VipaLika app after adding some items with cost](./src/media/diagrams/app-with-items.png)
+### Searching items
+![Searching Items in VipaLika app](./src/media/diagrams/search.png)
+### Highlighted items on retype
+If user retypes any items from the list, the item gets highlighted to prevent duplicate entries, but it does not blocks the submission anyway.
+![Duplicate items getting highlighted on retype in VipaLika app](./src/media/diagrams/highlight.png)
+
+### Support coders with Coffee
+
+Donate freely to payyunu@ybl with UPI
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
