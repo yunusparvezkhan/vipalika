@@ -8,10 +8,15 @@ const ItemList = () => {
     const dispatch = useDispatch();
     let totalCost = 0;
 
-    const items = useSelector((state) => {
-        return state.items.filter((item) => {
+    const { items, name } = useSelector((state) => {
+        const filteredItems = state.items.filter((item) => {
             return item.name.toLowerCase().includes(state.search.searchTerm.toLowerCase())
         });
+
+        return {
+            items: filteredItems,
+            name: state.form.name
+        }
     })
 
     const handleRemove = (id) => {
@@ -22,11 +27,13 @@ const ItemList = () => {
 
         totalCost = totalCost + item.cost;
 
+        const bold = name && item.name.toLowerCase().includes(name.toLowerCase());
+
         return (
-            <div key={item.id} className='panel item-box' >
-                <div className='item-container' >
-                    <div className='item-text-box'>
-                        <label className='item-text' ><b>{i + 1}. </b> {item.name} - ₹{item.cost}</label>
+            <div key={item.id} className={`panel item-box`} >
+                <div className='item-container'>
+                    <div className='item-text-box '>
+                        <label className={`item-text ${bold && 'has-text-weight-bold'}`} ><b>{i + 1}. </b> {item.name} - ₹{item.cost}</label>
                     </div>
                     <div className='item-btn-box'>
                         <button onClick={() => handleRemove(item.id)} className='button is-danger item-remove-btn' >Remove</button>
