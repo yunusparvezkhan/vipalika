@@ -50,6 +50,15 @@ const ItemList = () => {
             <hr />
             <label><b>Total Cost :-</b></label>
             <label> ₹{totalCost}</label>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
     )
 }
