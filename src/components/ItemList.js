@@ -9,7 +9,9 @@ const ItemList = () => {
     let totalCost = 0;
 
     const items = useSelector((state) => {
-        return state.items;
+        return state.items.filter((item) => {
+            return item.name.toLowerCase().includes(state.search.searchTerm.toLowerCase())
+        });
     })
 
     const handleRemove = (id) => {
